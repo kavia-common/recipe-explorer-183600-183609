@@ -10,6 +10,14 @@
 #include <QJsonObject>
 #include <QSettings>
 
+// Added explicit includes for Qt types used as member pointers or values
+#include <QPushButton>
+#include <QLineEdit>
+#include <QLabel>
+#include <QString>
+#include <QStringList>
+#include <QSet>
+
 // Small, focused data model for recipes used across views
 struct Recipe {
     QString id;

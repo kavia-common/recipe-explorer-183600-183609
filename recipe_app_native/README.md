@@ -31,9 +31,18 @@ Uses a modern "Ocean Professional" theme with clean aesthetics, rounded corners,
 cd recipe_app_native
 cmake -S . -B build
 cmake --build build
-# Run
+# Run (option 1): via CMake custom target
 cmake --build build --target run
+
+# Run (option 2): using helper script (recommended if preview tooling is unavailable)
+chmod +x run.sh
+./run.sh
 ```
+
+Troubleshooting:
+- If you see an error like `sudo: /usr/local/bin/start_vnc: command not found` during preview start,
+  it means the environment lacks VNC preview tooling. Use the `run.sh` helper to build and launch
+  the app directly without VNC.
 
 This will start the application with the Home screen. Use the top-right navigation to switch between:
 - Home

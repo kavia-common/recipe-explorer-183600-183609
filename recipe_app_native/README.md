@@ -60,3 +60,10 @@ Select a recipe's "Open" to view details, and toggle the star to favorite/unfavo
 ## Notes
 - The app uses stub/mock data only; no network calls or environment variables are required.
 - QSettings stores favorite IDs under organization "RecipeExplorer" and app "RecipeApp".
+
+Additional notes:
+- If automated preview attempts to start a VNC server and fails with a message like:
+  `sudo: /usr/local/bin/start_vnc: command not found`
+  use the provided scripts to launch the app directly:
+  - ./run.sh (interactive usage)
+  - ./entrypoint.sh (for container entrypoint or CI wrappers)
